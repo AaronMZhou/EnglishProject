@@ -256,3 +256,186 @@
       .left { transform: rotateY(90deg) translateZ(75px); }
       .right { transform: rotateY(-90deg) translateZ(75px); }
     }
+
+    /* Add these styles to your existing CSS file */
+
+/* Navigation Bar */
+.navbar {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.nav-logo {
+  color: var(--light-text);
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-link.active {
+  background: var(--accent-color);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .nav-menu {
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-left: 1rem;
+  }
+}
+
+/* Add these styles to your existing CSS file for the research journal page */
+
+/* Recording Sections */
+.recording-section {
+  margin-bottom: 4rem;
+}
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(236, 240, 241, 0.5);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.audio-player audio {
+  width: 70%;
+  height: 40px;
+}
+
+.recording-date {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Transcript Styling */
+.transcript {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent-color);
+  margin-top: 1rem;
+  display: none; /* Hidden by default */
+  box-shadow: var(--shadow);
+}
+
+.transcript h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.transcript-content {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.transcript-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.transcript-content strong {
+  color: var(--accent-color);
+}
+
+/* Toggle Button */
+.transcript-toggle {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+}
+
+.transcript-toggle:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.transcript-toggle:active {
+  transform: translateY(0);
+}
+
+/* Active states for transcript sections */
+.transcript.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Introduction section special styling */
+#intro {
+  background: var(--gradient-1);
+  color: var(--light-text);
+}
+
+#intro h2 {
+  color: var(--light-text);
+}
+
+#intro h2::after {
+  background: var(--light-text);
+}
